@@ -420,4 +420,71 @@ if (contactForm) {
   });
 }
 
+const linePaths = {
+  outer: [
+    "M95 0C35 70 115 150 55 250S15 340 85 400",
+    "M110 20C50 100 20 180 90 270S130 350 60 400",
+    "M80 0C120 90 40 170 100 260S30 330 70 400",
+    "M100 0C60 110 130 200 70 290S20 360 90 400",
+    "M70 10C110 80 30 160 90 240S120 320 50 400",
+    "M105 0C45 90 125 170 65 250S25 330 95 400",
+    "M85 15C25 95 105 185 45 275S85 355 75 400",
+    "M115 5C55 85 15 175 85 265S135 345 55 400",
+  ],
+  inner: [
+    "M90 0C40 80 110 160 60 250S20 330 80 400",
+    "M100 15C50 95 25 175 85 265S125 345 65 400",
+    "M75 5C115 85 35 165 95 255S30 335 70 400",
+    "M108 10C48 90 118 170 58 260S18 340 88 400",
+    "M82 20C22 100 102 180 42 270S92 350 72 400",
+    "M112 0C52 75 132 155 72 245S32 325 102 400",
+  ],
+};
+
+function createLineSvg(pathD, strokeWidth = "1") {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "page-line");
+  svg.setAttribute("viewBox", "0 0 120 400");
+  svg.setAttribute("fill", "none");
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", pathD);
+  path.setAttribute("stroke", "currentColor");
+  path.setAttribute("stroke-width", strokeWidth);
+  svg.appendChild(path);
+  return svg;
+}
+
+function initPageLines() {
+  const root = document.getElementById("page-lines");
+  if (!root) return;
+
+  ["left", "right"].forEach((side) => {
+    ["outer", "inner"].forEach((column) => {
+      const sideEl = document.createElement("div");
+      sideEl.className = `page-lines-side page-lines-side--${side} page-lines-side--${column}`;
+
+      linePaths[column].forEach((pathD, index) => {
+        const stroke = column === "inner" && index % 2 ? "0.85" : "1";
+        sideEl.appendChild(createLineSvg(pathD, stroke));
+      });
+
+      root.appendChild(sideEl);
+    });
+  });
+}
+
+function updatePageLinesTheme() {
+  const pageLines = document.getElementById("page-lines");
+  const hero = document.getElementById("inicio");
+  if (!pageLines || !hero) return;
+
+  const onHero = window.scrollY < hero.offsetHeight * 0.85;
+  pageLines.classList.toggle("page-lines--on-hero", onHero);
+}
+
+initPageLines();
+updatePageLinesTheme();
+window.addEventListener("scroll", updatePageLinesTheme, { passive: true });
+window.addEventListener("resize", updatePageLinesTheme, { passive: true });
+
 setLanguage(currentLang);
