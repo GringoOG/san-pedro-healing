@@ -273,7 +273,65 @@ const translations = {
   },
 };
 
+const marqueeItems = {
+  es: [
+    "Traumas",
+    "Crisis espirituales",
+    "Crisis emocionales",
+    "Vínculos tóxicos",
+    "Ansiedad",
+    "Depresión",
+    "Miedos y sombras",
+    "Estrés crónico",
+    "Desconexión emocional",
+    "Fragmentación interior",
+    "Inseguridad",
+    "Purificación energética",
+    "Energías bloqueadas",
+    "Pérdida de sentido",
+    "Reconexión con el cuerpo",
+    "Sanación profunda",
+    "Desconexión espiritual",
+    "Dolor emocional",
+  ],
+  en: [
+    "Trauma",
+    "Spiritual crises",
+    "Emotional crises",
+    "Toxic bonds",
+    "Anxiety",
+    "Depression",
+    "Fears and shadows",
+    "Chronic stress",
+    "Emotional disconnection",
+    "Inner fragmentation",
+    "Insecurity",
+    "Energetic purification",
+    "Blocked energies",
+    "Loss of purpose",
+    "Body reconnection",
+    "Deep healing",
+    "Spiritual disconnection",
+    "Emotional pain",
+  ],
+};
+
 let currentLang = localStorage.getItem("lang") || "es";
+
+function renderMarquee(lang) {
+  const track = document.getElementById("hero-marquee-track");
+  if (!track) return;
+
+  const items = marqueeItems[lang] || marqueeItems.es;
+  const segment = items
+    .map(
+      (item) =>
+        `<span class="hero-marquee-item">${item}</span><span class="hero-marquee-dot" aria-hidden="true">·</span>`
+    )
+    .join("");
+
+  track.innerHTML = segment + segment;
+}
 
 function setLanguage(lang) {
   currentLang = lang;
@@ -286,6 +344,8 @@ function setLanguage(lang) {
       el.textContent = translations[lang][key];
     }
   });
+
+  renderMarquee(lang);
 
   const langToggle = document.getElementById("lang-toggle");
   if (langToggle) {
