@@ -478,8 +478,19 @@ function updatePageLinesTheme() {
   const hero = document.getElementById("inicio");
   if (!pageLines || !hero) return;
 
-  const onHero = window.scrollY < hero.offsetHeight * 0.85;
-  pageLines.classList.toggle("page-lines--on-hero", onHero);
+  const centerY = window.scrollY + window.innerHeight * 0.45;
+  const lightLineSections = document.querySelectorAll(".hero, .stats, .section-dark, .quote-banner");
+  let useLightLines = window.scrollY < hero.offsetHeight * 0.85;
+
+  lightLineSections.forEach((section) => {
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    if (centerY >= top && centerY <= bottom) {
+      useLightLines = true;
+    }
+  });
+
+  pageLines.classList.toggle("page-lines--on-hero", useLightLines);
 }
 
 initPageLines();
