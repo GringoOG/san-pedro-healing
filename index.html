@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e3d2f" />
+    <meta
+      name="description"
+      content="San Pedro Healing Ollantaytambo — Ceremonias de wachuma, temazcal y sanación ancestral en el Valle Sagrado de los Incas. Guía: Arturo Usandivares Jimenez."
+    />
+    <title>San Pedro Healing Ollantaytambo — Sanación Ancestral en el Valle Sagrado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+    <header class="site-header" id="header">
+      <div class="container nav">
+        <a class="brand" href="#inicio">
+          <img
+            src="https://san-pedro-healing.com/wp-content/uploads/2024/11/logo.png"
+            alt="San Pedro Healing"
+            width="40"
+            height="40"
+          />
+          <span>San Pedro Healing</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+          <a href="#servicios" data-i18n="nav.services">Servicios</a>
+          <a href="#camino" data-i18n="nav.journey">Tu camino</a>
+          <a href="#testimonios" data-i18n="nav.testimonials">Testimonios</a>
+          <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Cambiar idioma">
+            <span class="lang-active">ESP</span>
+            <span class="lang-sep">/</span>
+            <span class="lang-inactive">ENG</span>
+          </button>
+          <a class="btn btn-primary btn-sm" href="#contacto" data-i18n="nav.cta">Reservar</a>
+          <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Abrir menú">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil" hidden>
+        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="#servicios" data-i18n="nav.services">Servicios</a>
+        <a href="#camino" data-i18n="nav.journey">Tu camino</a>
+        <a href="#testimonios" data-i18n="nav.testimonials">Testimonios</a>
+        <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        <a class="btn btn-primary" href="https://wa.me/51984011399" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="inicio">
+        <div class="hero-bg" aria-hidden="true">
+          <img
+            src="https://san-pedro-healing.com/wp-content/uploads/2024/08/temple-of-the-sun-ollantaytambo-fortress.jpg"
+            alt=""
+            loading="eager"
+          />
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Bienvenido a la Pachamama</p>
+          <h1>
+            <span data-i18n="hero.title1">SANACIÓN QUE ABRE</span>
+            <em data-i18n="hero.title2">TU CAMINO.</em>
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">
+            Ceremonias de San Pedro (wachuma) y temazcal guiadas con respeto ancestral en el corazón del Valle Sagrado de los Incas.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto" data-i18n="hero.cta1">Inicia tu viaje</a>
+            <a class="btn btn-outline-light" href="#servicios" data-i18n="hero.cta2">Explorar servicios</a>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats" aria-label="Estadísticas">
+        <div class="container stats-grid reveal">
+          <div class="stat">
+            <span class="stat-number">20+</span>
+            <span class="stat-label" data-i18n="stats.years">años de experiencia</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label" data-i18n="stats.ceremonies">ceremonias guiadas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5.0</span>
+            <span class="stat-label" data-i18n="stats.rating">valoración en TripAdvisor</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Safe space -->
+      <section class="section safe-space" id="seguridad">
+        <div class="container safe-space-grid reveal">
+          <div class="safe-space-content">
+            <p class="eyebrow dark" data-i18n="safe.eyebrow">Un lugar seguro para sanar</p>
+            <h2 data-i18n="safe.title">Respeto, guía y un espacio construido con intención</h2>
+            <p data-i18n="safe.p1">
+              Consumir San Pedro (huachuma) es una práctica altamente ritualizada con riesgos significativos para la salud si no se lleva a cabo de la manera adecuada. Es fundamental acercarse con el máximo respeto, bajo la guía de un chamán experimentado y en un entorno seguro.
+            </p>
+            <p data-i18n="safe.p2">
+              Siempre consulta a profesionales de la salud antes de tomar cualquier decisión. Para participar con nosotros solicitamos consentimiento informado, evaluación médica y constancia de tu médico de que no padeces: enfermedades cardíacas, hipertensión, trastornos psiquiátricos, epilepsia o asma.
+            </p>
+            <p data-i18n="safe.p3">
+              La ceremonia debe ser en un espacio donde tanto la persona como el curandero se sientan cómodos y protegidos. Con esta intención he construido un espacio bonito y seguro en Ollantaytambo.
+            </p>
+          </div>
+          <div class="safe-space-visual">
+            <img
+              src="https://san-pedro-healing.com/wp-content/uploads/2024/08/imagen1-1.png"
+              alt="Espacio ceremonial en Ollantaytambo"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section section-alt founder" id="sobre-mi">
+        <div class="container founder-grid reveal">
+          <div class="founder-image">
+            <img
+              src="https://san-pedro-healing.com/wp-content/uploads/2024/09/410905456_393862876310814_5277724853988380754_n-edited-2.jpg"
+              alt="Arturo Usandivares Jimenez"
+              loading="lazy"
+            />
+            <div class="founder-badge">
+              <span data-i18n="founder.badge">el curandero</span>
+            </div>
+          </div>
+          <div class="founder-content">
+            <p class="eyebrow dark" data-i18n="founder.eyebrow">Sobre mí</p>
+            <h2 data-i18n="founder.title">Conoce a tu guía</h2>
+            <h3 class="founder-name">Arturo Usandivares Jimenez</h3>
+            <p class="founder-role" data-i18n="founder.role">Curandero · Nativo del Valle Sagrado</p>
+            <p data-i18n="founder.p1">
+              Vengo de una familia de curanderos y parteras. En esta generación corro con la responsabilidad de compartir el conocimiento de mis abuelos. Soy nativo del Valle Sagrado, Ollantaytambo.
+            </p>
+            <p data-i18n="founder.p2">
+              Desde hace más de 20 años me dedico a compartir la medicina del San Pedro, un trabajo que asumo con mucha responsabilidad y alegría. Mi enfoque combina el respeto por las tradiciones ancestrales con un espacio seguro y acogedor para cada persona que llega.
+            </p>
+            <div class="founder-contact">
+              <div>
+                <span class="label" data-i18n="founder.address">Dirección</span>
+                <p>Lares K'ikllu, Ollantaytambo<br />Junto a Apu Lodge, Cusco, Perú</p>
+              </div>
+              <div>
+                <span class="label" data-i18n="founder.phone">Teléfono</span>
+                <p><a href="tel:+51984011399">+51 984 011 399</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section services" id="servicios">
+        <div class="container reveal">
+          <div class="section-header">
+            <p class="eyebrow dark" data-i18n="services.eyebrow">Qué ofrecemos</p>
+            <h2 data-i18n="services.title">Cuidado diseñado alrededor de ti</h2>
+            <p class="section-desc" data-i18n="services.desc">
+              Cada servicio es una puerta hacia la comprensión de lo que tu cuerpo, mente y espíritu realmente necesitan.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <span class="service-num">I</span>
+              <h3 data-i18n="services.s1.title">Ceremonia de Wachuma</h3>
+              <p data-i18n="services.s1.desc">
+                Ritual transformador con la medicina sagrada del San Pedro. Orientación, sanación de traumas y reconexión con tu espiritualidad bajo guía experta.
+              </p>
+              <a href="#san-pedro" class="service-link" data-i18n="services.learn">Saber más →</a>
+            </article>
+            <article class="service-card">
+              <span class="service-num">II</span>
+              <h3 data-i18n="services.s2.title">Temazcal Ceremonial</h3>
+              <p data-i18n="services.s2.desc">
+                Casa de sudor ancestral para purificación física y energética. Cantos, oraciones y plantas medicinales en un ritual de renacimiento.
+              </p>
+              <a href="#temazcal" class="service-link" data-i18n="services.learn">Saber más →</a>
+            </article>
+            <article class="service-card">
+              <span class="service-num">III</span>
+              <h3 data-i18n="services.s3.title">Alojamiento</h3>
+              <p data-i18n="services.s3.desc">
+                Diferentes opciones de hospedaje cerca de nuestro santuario para una estadía cómoda antes y después de tu ceremonia.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-num">IV</span>
+              <h3 data-i18n="services.s4.title">Dieta Pre y Post</h3>
+              <p data-i18n="services.s4.desc">
+                Orientación nutricional antes y después de la toma para asegurar una mejor absorción y una integración más profunda.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-num">V</span>
+              <h3 data-i18n="services.s5.title">Tours Guiados</h3>
+              <p data-i18n="services.s5.desc">
+                Coordinamos con agencias de confianza para que disfrutes las maravillas de Ollantaytambo y el Valle Sagrado.
+              </p>
+            </article>
+            <article class="service-card">
+              <span class="service-num">VI</span>
+              <h3 data-i18n="services.s6.title">Camping</h3>
+              <p data-i18n="services.s6.desc">
+                Espacio agradable para acampar en conexión con la naturaleza, ideal para quienes buscan una experiencia más inmersiva.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- San Pedro detail -->
+      <section class="section section-dark detail" id="san-pedro">
+        <div class="container detail-grid reveal">
+          <div class="detail-content">
+            <p class="eyebrow" data-i18n="wachuma.eyebrow">La medicina</p>
+            <h2 data-i18n="wachuma.title">Ceremonia de Wachuma</h2>
+            <p data-i18n="wachuma.p1">
+              El San Pedro o wachuma es una planta cactácea cuyo hábitat se extiende por la costa del Perú y regiones de la cordillera andina. Su principio activo, la mezcalina, es extraída mediante cocción por varias horas, acompañada de ícaros y oraciones que armonizan los poderes de la medicina.
+            </p>
+            <p data-i18n="wachuma.p2">
+              Los registros más antiguos provienen de culturas como Caral y Chavín, hace aproximadamente 4000 años. Hoy, los maestros curanderos seguimos utilizando sus beneficios para orientar, sanar traumas y reconocer las crisis espirituales en los procesos de vida.
+            </p>
+            <p data-i18n="wachuma.p3">
+              La planta actúa como una llave que permite espiritualizar el cuerpo y corporizar el espíritu, integrando ambas dimensiones. Ayuda a reconocer vínculos tóxicos, abrir nuevos procesos de reinicio y liberar energías que limitan nuestro potencial.
+            </p>
+          </div>
+          <div class="detail-image">
+            <img
+              src="https://san-pedro-healing.com/wp-content/uploads/2024/07/imagen2.png"
+              alt="Ceremonia de San Pedro"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Temazcal detail -->
+      <section class="section detail" id="temazcal">
+        <div class="container detail-grid detail-grid-reverse reveal">
+          <div class="detail-content">
+            <p class="eyebrow dark" data-i18n="temazcal.eyebrow">Purificación ancestral</p>
+            <h2 data-i18n="temazcal.title">Temazcal Ceremonial</h2>
+            <p data-i18n="temazcal.p1">
+              La palabra temazcal proviene del náhuatl y significa «casa de sudor». Una tradición milenaria de Mesoamérica practicada durante siglos por diversas culturas indígenas.
+            </p>
+            <p data-i18n="temazcal.p2">
+              En el interior se calientan piedras volcánicas con fuego. Sobre ellas se vierten infusiones de plantas medicinales — romero, eucalipto, salvia o ruda — creando un ambiente intenso y ritualizado, guiado por cantos, oraciones y momentos de silencio.
+            </p>
+            <ul class="benefit-list">
+              <li data-i18n="temazcal.b1">Purificación física y energética</li>
+              <li data-i18n="temazcal.b2">Desintoxicación y fortalecimiento inmunológico</li>
+              <li data-i18n="temazcal.b3">Tratamiento de reumatismo y problemas respiratorios</li>
+              <li data-i18n="temazcal.b4">Relajación profunda y conexión espiritual</li>
+            </ul>
+          </div>
+          <div class="detail-image">
+            <img
+              src="https://san-pedro-healing.com/wp-content/uploads/2024/08/colorfull-from-the-inside-of-a-temazcal-with-some-people-1.png"
+              alt="Interior del temazcal"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Journey -->
+      <section class="section section-alt journey" id="camino">
+        <div class="container reveal">
+          <div class="section-header centered">
+            <p class="eyebrow dark" data-i18n="journey.eyebrow">Tu camino</p>
+            <h2 data-i18n="journey.title">Tres pasos. Una conversación continua.</h2>
+          </div>
+          <div class="journey-steps">
+            <article class="journey-step">
+              <span class="step-num">01</span>
+              <h3 data-i18n="journey.s1.title">Preparación</h3>
+              <p data-i18n="journey.s1.desc">
+                Evaluación médica, consentimiento informado y dieta adecuada. Nos conocemos, aclaramos expectativas y preparamos el espacio interior para la ceremonia.
+              </p>
+            </article>
+            <article class="journey-step">
+              <span class="step-num">02</span>
+              <h3 data-i18n="journey.s2.title">Ceremonia</h3>
+              <p data-i18n="journey.s2.desc">
+                Ritual guiado con ícaros, oraciones y la medicina sagrada. Un espacio seguro donde puedes entregarte al proceso con confianza y respeto.
+              </p>
+            </article>
+            <article class="journey-step">
+              <span class="step-num">03</span>
+              <h3 data-i18n="journey.s3.title">Integración</h3>
+              <p data-i18n="journey.s3.desc">
+                Dieta post-ceremonia, descanso y acompañamiento. La sanación no termina con la ceremonia — es un camino que continuamos juntos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section testimonials" id="testimonios">
+        <div class="container reveal">
+          <div class="section-header">
+            <p class="eyebrow dark" data-i18n="testimonials.eyebrow">Historias de sanación</p>
+            <h2 data-i18n="testimonials.title">Lo que cambia cuando te sientes escuchado</h2>
+          </div>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial-card">
+              <p data-i18n="testimonials.t1.text">
+                «A lo largo de los años he regresado muchas veces a Perú para trabajar con Arturo en ceremonia sagrada. Cada vez es una experiencia de aprendizaje, crecimiento y conexión con nuestra madre tierra. Es un curandero experimentado que aborda la medicina con respeto y humildad.»
+              </p>
+              <footer>
+                <cite>Dee Dee Goldpaugh</cite>
+                <span data-i18n="testimonials.t1.role">Woodstock, NY · Chrysalis Integrative Psychotherapy</span>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card featured">
+              <p data-i18n="testimonials.t2.text">
+                «Leí muchos libros sobre la importancia de la persona que guía la ceremonia, pero para entenderlo hay que vivirlo. Cada vez que intentaba mirar a Arturo con gratitud, recibía el mensaje: no me agradezcas, estoy aquí para ayudarte a conectar. Gracias a los espíritus y a la Pachamama.»
+              </p>
+              <footer>
+                <cite>Bart</cite>
+                <span data-i18n="testimonials.t2.role">Visitante internacional</span>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+              <p data-i18n="testimonials.t3.text">
+                «Qué alma hermosa, que se ríe con los ojos. Gratitud fuerte por esa conexión que el universo me trajo desde lo alto del Perú hasta mi corazón.»
+              </p>
+              <footer>
+                <cite>Samara Durante</cite>
+                <span data-i18n="testimonials.t3.role">Brasil</span>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="tripadvisor">
+            <a
+              href="https://www.tripadvisor.com.pe/Attraction_Review-g294319-d28029401-Reviews-San_Pedro_Healing_Ollantaytambo-Ollantaytambo_Sacred_Valley_Cusco_Region.html"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="https://san-pedro-healing.com/wp-content/uploads/2024/08/tripadvisor-logo-5.png"
+                alt="TripAdvisor"
+                loading="lazy"
+              />
+              <span data-i18n="testimonials.tripadvisor">Ver más reseñas en TripAdvisor</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="section section-alt gallery" id="galeria">
+        <div class="container reveal">
+          <div class="section-header centered">
+            <p class="eyebrow dark" data-i18n="gallery.eyebrow">Galería</p>
+            <h2 data-i18n="gallery.title">Más de 20 años dedicados a la sanación</h2>
+            <p class="section-desc" data-i18n="gallery.desc">
+              Recuerdos de ceremonias, encuentros y momentos sagrados en Ollantaytambo.
+            </p>
+          </div>
+        </div>
+        <div class="gallery-masonry reveal">
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/09/16797820_1282044901863283_1281923481055332929_o.jpg" alt="Ceremonia" loading="lazy" />
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/09/266184503_4590524814348592_9177446726785947403_n.jpg" alt="Valle Sagrado" loading="lazy" />
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/09/455076449_18277920064226610_2057974931655991726_n.jpg" alt="Grupo ceremonial" loading="lazy" />
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/08/14292243_1116305508437904_2674847234580042936_n.jpg" alt="Sanación" loading="lazy" />
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/09/14088490_1120920301309078_7021088182515746568_n.jpg" alt="Naturaleza" loading="lazy" />
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/09/435580657_451887217175046_6017696591678532814_n.jpg" alt="Ceremonia nocturna" loading="lazy" />
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/08/nf-clean-eats-0886-2.jpg" alt="Dieta ceremonial" loading="lazy" />
+          <img src="https://san-pedro-healing.com/wp-content/uploads/2024/09/210361_388518757882573_999373185_o-1.jpg" alt="Ollantaytambo" loading="lazy" />
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq" id="faq">
+        <div class="container reveal">
+          <div class="section-header centered">
+            <p class="eyebrow dark" data-i18n="faq.eyebrow">Preguntas frecuentes</p>
+            <h2 data-i18n="faq.title">Todo lo que necesitas saber</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary data-i18n="faq.q1">¿Qué hace diferente a Arturo de otros guías?</summary>
+              <p data-i18n="faq.a1">
+                Arturo viene de una familia de curanderos con más de 20 años de experiencia. Su enfoque se basa en la humildad, el respeto y la seguridad — sin ego, centrado en ayudarte a conectar con la Pachamama y los espíritus que te guían.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary data-i18n="faq.q2">¿Necesito preparación médica previa?</summary>
+              <p data-i18n="faq.a2">
+                Sí. Solicitamos consentimiento informado, evaluación médica y constancia de tu médico confirmando que no padeces enfermedades cardíacas, hipertensión, trastornos psiquiátricos, epilepsia o asma.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary data-i18n="faq.q3">¿Qué incluye la estadía?</summary>
+              <p data-i18n="faq.a3">
+                Ofrecemos alojamiento cerca del santuario, orientación de dieta pre y post ceremonia, y coordinación de tours por el Valle Sagrado según tus necesidades.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary data-i18n="faq.q4">¿Cómo reservo una ceremonia?</summary>
+              <p data-i18n="faq.a4">
+                Contáctanos por WhatsApp al +51 984 011 399 o mediante el formulario de contacto. Responderemos lo antes posible para coordinar fechas y preparación.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary data-i18n="faq.q5">¿Dónde se realizan las ceremonias?</summary>
+              <p data-i18n="faq.a5">
+                En nuestro santuario en Lares K'ikllu, Ollantaytambo, junto a Apu Lodge, en el corazón del Valle Sagrado de los Incas, Cusco, Perú.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section-dark contact" id="contacto">
+        <div class="container contact-grid reveal">
+          <div class="contact-info">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
+            <h2 data-i18n="contact.title">Inicia tu viaje de sanación</h2>
+            <p data-i18n="contact.desc">
+              Cualquier consulta, contáctanos. Intentaremos responderte en el menor tiempo posible.
+            </p>
+            <div class="contact-methods">
+              <a class="contact-method" href="https://wa.me/51984011399" target="_blank" rel="noopener">
+                <span class="method-icon">💬</span>
+                <div>
+                  <span class="label">WhatsApp</span>
+                  <p>+51 984 011 399</p>
+                </div>
+              </a>
+              <a class="contact-method" href="mailto:Usandivaresarturo936@gmail.com">
+                <span class="method-icon">✉️</span>
+                <div>
+                  <span class="label" data-i18n="contact.email">Email</span>
+                  <p>Usandivaresarturo936@gmail.com</p>
+                </div>
+              </a>
+              <a
+                class="contact-method"
+                href="https://web.facebook.com/AncestralCeremoniesOllantaytambo"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="method-icon">📘</span>
+                <div>
+                  <span class="label">Facebook</span>
+                  <p data-i18n="contact.facebook">Ancestral Ceremonies Ollantaytambo</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <label>
+                <span data-i18n="form.firstname">Nombre</span>
+                <input type="text" name="firstname" required autocomplete="given-name" />
+              </label>
+              <label>
+                <span data-i18n="form.lastname">Apellido</span>
+                <input type="text" name="lastname" required autocomplete="family-name" />
+              </label>
+            </div>
+            <label>
+              <span data-i18n="form.email">Email</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label>
+              <span data-i18n="form.message">Mensaje</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn btn-primary btn-full" type="submit" data-i18n="form.submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Quote -->
+      <section class="quote-banner">
+        <div class="container reveal">
+          <blockquote>
+            <p data-i18n="quote.text">
+              No puedes volver atrás y cambiar el principio, pero puedes comenzar donde estás y cambiar el final.
+            </p>
+            <footer>
+              <cite>Arturo Usandivares Jimenez</cite>
+              <span data-i18n="quote.role">San Pedro Healing Ollantaytambo</span>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#inicio">
+            <img
+              src="https://san-pedro-healing.com/wp-content/uploads/2024/11/logo.png"
+              alt="San Pedro Healing"
+              width="36"
+              height="36"
+            />
+            <span>San Pedro Healing</span>
+          </a>
+          <p data-i18n="footer.tagline">Sanación ancestral en el Valle Sagrado de los Incas.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Enlaces del pie">
+          <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+          <a href="#servicios" data-i18n="nav.services">Servicios</a>
+          <a href="#san-pedro">Wachuma</a>
+          <a href="#temazcal">Temazcal</a>
+          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://wa.me/51984011399" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+          <a href="https://web.facebook.com/AncestralCeremoniesOllantaytambo" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; <span id="year"></span> San Pedro Healing Ollantaytambo · Arturo Usandivares Jimenez</p>
+        <p class="footer-location">Lares K'ikllu, Ollantaytambo, Cusco, Perú</p>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/51984011399" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
