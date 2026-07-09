@@ -364,7 +364,6 @@ const menuToggle = document.getElementById("menu-toggle");
 const mobileNav = document.getElementById("mobile-nav");
 const year = document.getElementById("year");
 const header = document.getElementById("header");
-const langToggle = document.getElementById("lang-toggle");
 const contactForm = document.getElementById("contact-form");
 
 if (year) {
