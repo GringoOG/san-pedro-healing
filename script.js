@@ -347,10 +347,17 @@ function setLanguage(lang) {
 
   renderMarquee(lang);
 
-  const langToggle = document.getElementById("lang-toggle");
-  if (langToggle) {
-    langToggle.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
-  }
+  document.querySelectorAll(".lang-toggle").forEach((toggle) => {
+    toggle.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
+  });
+}
+
+function setMobileNavOpen(isOpen) {
+  if (!menuToggle || !mobileNav) return;
+  mobileNav.toggleAttribute("hidden", !isOpen);
+  menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+  document.body.classList.toggle("menu-open", isOpen);
 }
 
 const menuToggle = document.getElementById("menu-toggle");
@@ -366,23 +373,33 @@ if (year) {
 
 if (menuToggle && mobileNav) {
   menuToggle.addEventListener("click", () => {
-    const isHidden = mobileNav.hasAttribute("hidden");
-    mobileNav.toggleAttribute("hidden", !isHidden);
-    menuToggle.setAttribute("aria-label", isHidden ? "Cerrar menú" : "Abrir menú");
+    setMobileNavOpen(mobileNav.hasAttribute("hidden"));
   });
 
   mobileNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      mobileNav.setAttribute("hidden", "");
+      setMobileNavOpen(false);
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !mobileNav.hasAttribute("hidden")) {
+      setMobileNavOpen(false);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768 && !mobileNav.hasAttribute("hidden")) {
+      setMobileNavOpen(false);
+    }
   });
 }
 
-if (langToggle) {
-  langToggle.addEventListener("click", () => {
+document.querySelectorAll(".lang-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", () => {
     setLanguage(currentLang === "es" ? "en" : "es");
   });
-}
+});
 
 if (header) {
   const onScroll = () => {

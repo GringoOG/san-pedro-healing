@@ -35,6 +35,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-h);
+  overflow-x: clip;
 }
 
 body {
@@ -45,6 +46,11 @@ body {
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 .site-header,
@@ -195,6 +201,7 @@ h3 {
   left: 0;
   right: 0;
   z-index: 50;
+  padding-top: env(safe-area-inset-top, 0px);
   background: rgba(245, 242, 235, 0.85);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -222,6 +229,13 @@ h3 {
   font-weight: 600;
   font-size: 1rem;
   color: var(--bg-dark);
+  min-width: 0;
+}
+
+.brand span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .brand img {
@@ -252,10 +266,11 @@ h3 {
 }
 
 .lang-toggle {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 0.15rem;
   padding: 0.4rem 0.6rem;
+  min-height: 2.75rem;
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 100px;
@@ -293,8 +308,8 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   background: transparent;
@@ -312,6 +327,9 @@ h3 {
   gap: 0.25rem;
   padding: 0 1.25rem 1.25rem;
   border-top: 1px solid var(--border);
+  max-height: calc(100svh - var(--header-h));
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .mobile-nav[hidden] {
@@ -319,9 +337,12 @@ h3 {
 }
 
 .mobile-nav a {
-  padding: 0.75rem 0;
+  padding: 0.85rem 0;
   font-weight: 500;
   border-bottom: 1px solid var(--border);
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
 }
 
 .mobile-nav .btn {
@@ -489,8 +510,140 @@ h3 {
 }
 
 @media (max-width: 767px) {
+  :root {
+    --container: min(1200px, calc(100% - 1.5rem));
+    --header-h: 4rem;
+  }
+
   .page-lines-side--inner {
     display: none;
+  }
+
+  .page-lines-side {
+    width: 2.5rem;
+  }
+
+  .hero {
+    padding: calc(var(--header-h) + 2rem) 0 5rem;
+    align-items: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .hero-marquee-item {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+
+  .stats {
+    padding: 2.5rem 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.8125rem;
+    max-width: 18rem;
+    margin-inline: auto;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .safe-space-grid,
+  .founder-grid,
+  .detail-grid,
+  .contact-grid {
+    gap: 2rem;
+  }
+
+  .service-card,
+  .journey-step,
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .tripadvisor a {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gallery-masonry {
+    columns: 1;
+    padding: 0 0.75rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .quote-banner {
+    padding: 3.5rem 0;
+  }
+
+  .quote-banner p {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+
+  .footer-grid {
+    gap: 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .whatsapp-float {
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    right: calc(1rem + env(safe-area-inset-right, 0px));
+  }
+}
+
+@media (max-width: 479px) {
+  .brand span {
+    display: none;
+  }
+
+  .page-lines {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
   }
 }
 
@@ -1301,16 +1454,16 @@ h3 {
   }
 
   .gallery-masonry {
-    columns: 3;
+    columns: 2;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 768px) {
   .nav-links {
-    display: flex;
-  }
-
-  .lang-toggle {
     display: flex;
   }
 
